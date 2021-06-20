@@ -13,12 +13,12 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-# Modify luci-app-passwall dependancy from v2ray-plugin to xray-plugin
+# Modify luci-app-passwall dependency from v2ray-plugin to xray-plugin
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/v2ray-plugin/xray-plugin/g' {}
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/V2ray_Plugin/Xray_Plugin/g' {}
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/V2ray-plugin/Xray-plugin/g' {}
 
-# Modify luci-app-ssr-plus dependancy from v2ray-plugin to xray-plugin
+# Modify luci-app-ssr-plus dependency from v2ray-plugin to xray-plugin
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/v2ray-plugin/xray-plugin/g' {}
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/V2ray_Plugin/Xray_Plugin/g' {}
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/V2ray-plugin/Xray-plugin/g' {}
