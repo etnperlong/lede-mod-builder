@@ -24,6 +24,6 @@ find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/V2ray-plugin/Xray-plugin/g' {}
 
 # Replace luci-theme-argon by jerrykuku/luci-theme-argon/tree/18.06
-cd lede/package/lean  
+cd package/lean  
 rm -rf luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
