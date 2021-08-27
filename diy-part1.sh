@@ -13,5 +13,15 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
+# Patch by My-Patch Branch
+git remote -v
+git remote add patch https://github.com/etnperlong/lede-mod.git
+git remote -v
+git fetch patch
+git checkout master
+git merge patch/my-patch
+
+
 # Add a feed source
-#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git' feeds.conf.default
+sed -i '$a src-git kenzok8small https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
