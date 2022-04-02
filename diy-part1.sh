@@ -29,4 +29,4 @@ sed -i '$a src-git ethernfq https://github.com/mister-benjamin/etherwake-nfqueue
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld.git' feeds.conf.default
 
 # Patch Asterisk Quectel dongle
-sed -i 's,https://git.openwrt.org/feed/telephony.git,https://github.com/etnperlong/telephony.git;asterisk-chan-quectel,g' feeds.conf.default
+# sed -i 's,https://git.openwrt.org/feed/telephony.git,https://github.com/etnperlong/telephony.git;asterisk-chan-quectel,g' feeds.conf.default
