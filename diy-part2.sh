@@ -24,9 +24,10 @@ find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs
 find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/V2ray-plugin/Xray-plugin/g' {}
 
 # Replace luci-theme-argon by jerrykuku/luci-theme-argon/tree/18.06
-cd package/lean  
+pushd package/lean  
 rm -rf luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+popd
 
 # Add Support for Asterisk Quectel dongle
 git clone https://github.com/etnperlong/openwrt-asterisk-chan-quectel.git feeds/package/telephony/net/openwrt-asterisk-chan-quectel
