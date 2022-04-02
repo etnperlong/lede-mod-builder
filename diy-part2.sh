@@ -14,14 +14,14 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # Modify luci-app-passwall dependency from v2ray-plugin to xray-plugin
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/v2ray-plugin/xray-plugin/g' {}
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/V2ray_Plugin/Xray_Plugin/g' {}
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/V2ray-plugin/Xray-plugin/g' {}
+# find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/v2ray-plugin/xray-plugin/g' {}
+# find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/V2ray_Plugin/Xray_Plugin/g' {}
+# find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-passwall/Makefile" | xargs -i sed -i 's/V2ray-plugin/Xray-plugin/g' {}
 
 # Modify luci-app-ssr-plus dependency from v2ray-plugin to xray-plugin
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/v2ray-plugin/xray-plugin/g' {}
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/V2ray_Plugin/Xray_Plugin/g' {}
-find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/V2ray-plugin/Xray-plugin/g' {}
+# find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/v2ray-plugin/xray-plugin/g' {}
+# find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/V2ray_Plugin/Xray_Plugin/g' {}
+# find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-ssr-plus/Makefile" | xargs -i sed -i 's/V2ray-plugin/Xray-plugin/g' {}
 
 # Replace luci-theme-argon by jerrykuku/luci-theme-argon/tree/18.06
 pushd package/lean  
@@ -30,7 +30,8 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 popd
 
 # Add Support for Asterisk Quectel dongle
-git clone https://github.com/etnperlong/openwrt-asterisk-chan-quectel.git feeds/package/telephony/net/openwrt-asterisk-chan-quectel
+git clone https://github.com/etnperlong/openwrt-asterisk-chan-quectel.git feeds/telephony/net/asterisk-chan-quectel
 
 # Install again
+./scripts/feeds update -a
 ./scripts/feeds install -a
