@@ -31,3 +31,6 @@ popd
 
 # Add Support for Asterisk Quectel dongle
 git clone https://github.com/etnperlong/openwrt-asterisk-chan-quectel.git feeds/package/telephony/net/openwrt-asterisk-chan-quectel
+
+# Install again
+./scripts/feeds install -a
