@@ -29,9 +29,6 @@ rm -rf luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 popd
 
-# Add Support for Asterisk Quectel dongle
-git clone https://github.com/etnperlong/openwrt-asterisk-chan-quectel.git feeds/telephony/net/asterisk-chan-quectel
-
 # Install again
 ./scripts/feeds update -a
 ./scripts/feeds install -a

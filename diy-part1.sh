@@ -21,6 +21,8 @@ git fetch patch
 git checkout master
 git merge patch/my-patch
 
+# Add Support for Asterisk Quectel dongle
+git clone https://github.com/etnperlong/openwrt-asterisk-chan-quectel.git package/asterisk-chan-quectel
 
 # Add a feed source
 sed -i '$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git' feeds.conf.default
