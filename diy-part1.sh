@@ -13,6 +13,10 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
+# Set default Git Identity
+git config --global user.name "Evans Mike"
+git config --global user.email "etnperlong@gmail.com"
+
 # Patch by My-Patch Branch
 git remote -v
 git remote add patch https://github.com/etnperlong/lede-mod.git
