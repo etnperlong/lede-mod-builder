@@ -61,11 +61,11 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     
-    - name: Cache build steps
+    - name: Use build cache
       uses: klever1988/cachewrtbuild@main
       with:
         ccache: 'true'
-        prefix: $GITHUB_WORKSPACE/openwrt
+        prefix: ${{ github.workspace }}/openwrt
         toolchain: true
         skip: true
         mixkey: 'cm520'
